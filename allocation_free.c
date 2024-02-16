@@ -87,5 +87,5 @@ void free_grid(char **s)
 		return;
 	for (; s[i]; i++)
 		free(s[i]);
-	free(s=);
+	free(s);
 }
