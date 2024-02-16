@@ -12,10 +12,11 @@ int count_words(char *buffer)
 	{
 		if (buffer[i] == 32 && buffer[i + 1] != 32 && buffer[i + 1] != '\0')
 			words++;
-		j++;
+		i++;
 	}
 	return (words);
 }
+
 char *alloc_words_buffer(char *buffer, int *index_buffer)
 {
 	char *s;
@@ -37,6 +38,7 @@ char *alloc_words_buffer(char *buffer, int *index_buffer)
 	s[j] = '\0';
 	return (s);
 }
+
 char **allocate_argv_and_set(char *buffer, int *f)
 {
 	char **s;
@@ -76,11 +78,12 @@ char **allocate_argv_and_set(char *buffer, int *f)
 	s[i] = NULL;
 	return (s);
 }
+
 void free_grid(char **s)
 {
 	int i = 0;
 
-	if (s)
+	if (!s)
 		return;
 	for (; s[i]; i++)
 		free(s[i]);
