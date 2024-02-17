@@ -39,7 +39,7 @@ char *_strcat(char *dest, char *src)
 
 char *_strcpy(char *dest, char *src)
 {
-	char *destStart = dest;
+	char *Start = dest;
 
 	while (*src != '\0')
 	{
@@ -50,7 +50,7 @@ char *_strcpy(char *dest, char *src)
 
 	*dest = '\0';
 
-	return (destStart);
+	return (Start);
 }
 
 int _strncmp(char *s1, char *s2, int n)
@@ -61,8 +61,8 @@ int _strncmp(char *s1, char *s2, int n)
 	{
 		if (s1[i] == '\0' || s2[i] == '\0' || s1[i] != s2[i])
 		{
-			return (1);
+			return (-1);
 		}
 	}
-	return (0)
+	return (0);
 }
