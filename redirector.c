@@ -1,8 +1,17 @@
 #include "main.h"
-
+/**
+ * redirector - Redirects input based on the provided buffer content.
+ * @buffer: Double pointer to the input buffer.
+ * @get_line: Flag indicating if a new line is obtained.
+ * @av: Command-line arguments.
+ * @c: count.
+ * @i: for interactive mode should i free or not.
+ * Return: 0 if get_line is -1, 1 if buffer contains only '\n',
+ * -1 on error.
+ */
 int redirector(char **buffer, int get_line, char *av, int c, int i)
 {
-        int e = 0, exit_s = 0;
+        int x = 0, _exit = 0;
 
         if (c == 0)
                 c = 1;
@@ -20,16 +29,16 @@ int redirector(char **buffer, int get_line, char *av, int c, int i)
                 print_env();
                 return (1);
         }
-        e = _strcmp_exit(*buffer);
-        if (e > 0)
+        x = _strcmp_exit(*buffer);
+        if (x > 0)
         {
-                if (e == 2)
-                        exit_s = advnce_exit(*buffer, av);
-                if (e == 3)
-                        exit_s = berror_exit(c, *buffer + 5, av);
+                if (x == 2)
+                        _exit = advnce_exit(*buffer, av);
+                if (x == 3)
+                        _exit = berror_exit(c, *buffer + 5, av);
                 if (i)
                         free(*buffer);
-                return (exit_s);
+                return (_exit);
         }
         return (-1);
 }
