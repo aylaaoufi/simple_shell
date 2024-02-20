@@ -1,5 +1,10 @@
 #include "main.h"
-
+/**
+ * _strchr -  locates a character in a string
+ * @s: pointer to string
+ * @c: pointer to character
+ * Return: if c found return occurence if its not return NULL
+ */
 char *_strchr(char *s, char c)
 {
         int i;
