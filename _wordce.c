@@ -22,5 +22,5 @@ int count_words_echo(char *buffer)
 			wds++;
 		q++;
 	}
-	return (words);
+	return (wds);
 }
