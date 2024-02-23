@@ -41,4 +41,5 @@ int redirector(char **buffer, int get_line, char *av, int c, int i);
 char *_getenvi();
 void print_env(void);
 int advnce_exit(char *buffer, char *av);
+char *alloc_words_echo(char *buffer, int *index_buffer);
 #endif
