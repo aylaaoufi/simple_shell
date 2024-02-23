@@ -15,7 +15,6 @@ int berror_exit(int count, char *n, char *av);
 void _puts(char *str);
 void print_int(unsigned int n);
 int interactive_mode(char *av);
-char *alloc_words_echo(char *buffer, int *index_buffer);
 char **allocate_argv_and_set(char *buffer, int *f);
 char *alloc_words_buffer(char *buffer, int *index_buffer);
 int allocat_faild(char ***s, char **buffer, int is_f);
