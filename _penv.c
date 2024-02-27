@@ -1,4 +1,4 @@
-#include "main.c"
+#include "main.h"
 /**
  * print_env - Print the environment variables to STDOUT.
  */

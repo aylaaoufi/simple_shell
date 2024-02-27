@@ -12,7 +12,7 @@ int interactive_mode(char *av)
 
 	while (1)
 	{
-		write(STDOUT_FILENO, "#marvel$ ", 9), is_redirect = 0;
+		write(STDOUT_FILENO, "#user$ ", 7), is_redirect = 0;
 		getline_result = getline(&input_buffer, &buffer_size, stdin);
 		command_count++;
 		exit_code = redirector(&input_buffer, getline_result, av, command_count, 0);
