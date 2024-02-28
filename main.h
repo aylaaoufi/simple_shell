@@ -1,8 +1,5 @@
 #ifndef _SHELL_
 #define _SHELL_
-
-#ifndef _SHELL_
-#define _SHELL_
 #include <stdlib.h>
 #include <unistd.h>
 #include <string.h>
