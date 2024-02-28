@@ -6,13 +6,12 @@
  * @av: The program name or argv[0].
  * Return: 0 on success, 1 on failure.
  */
-
 int berror(int count, char *buffer, char *av)
 {
 	char *tmp = skip_space_tab_for_berror(buffer);
 
 	if (!tmp)
-		return (0);
+		return (1);
 	_puts(av);
 	_puts(": ");
 	print_int(count);
