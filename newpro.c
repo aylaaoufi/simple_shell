@@ -1,5 +1,4 @@
 #include "main.h"
-
 /**
  * new_pro - Creates a new process to execute a command.
  * @s: Double pointer to the command and its arguments.
