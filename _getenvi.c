@@ -4,7 +4,6 @@
  * Return: with the value of the environment variable
  *         or NULL if the variable is not found or has an empty value.
  */
-
 char *_getenvi()
 {
 	char *t, *k, *env, *s, *v;
